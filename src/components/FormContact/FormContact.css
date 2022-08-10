@@ -1,0 +1,12 @@
+
+.Form-Container{
+    display: flex;
+    width: 300px;
+    height: 300px;
+  
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
