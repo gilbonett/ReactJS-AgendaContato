@@ -1,4 +1,3 @@
-//import React, { useState, useEffect } from 'react';
 import {Container, Navbar , Nav} from "react-bootstrap"
 
 import './App.css';
@@ -8,8 +7,9 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import {FormContact} from './components/FormContact/FormContact';
+import {AddContact} from './components/FormContact/FormContact';
 import {TableContact} from './components/TableContact/TableContact';
+import {ToUpdateContact} from "./components/FormContact/ToUpdateContact";
 
 
 function App() {
@@ -35,7 +35,9 @@ function App() {
 
       <Routes>
         <Route path="/" index element={<TableContact/>}/>
-        <Route path="/FormContact" element={<FormContact/>}/>
+        <Route path="/FormContact" element={<AddContact/>}/>
+        <Route path="/FormContact/ToUpdateContact/:id" element={<ToUpdateContact/>}/>
+        <Route path="/" element={<ToUpdateContact/>}/>
       </Routes>
     </BrowserRouter>
     </div>

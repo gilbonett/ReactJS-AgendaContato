@@ -1,37 +1,46 @@
-import React, { useState} from 'react';
-//import Swal from 'sweetalert2';
-import '../FormContact/FormContact.css'
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
 
-const AddContact =() => {
-    
+
+function ToUpdateContact () {
+
     const [name, setName] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
 
-const navegador = useNavigate()
+    const navegador = useNavigate() 
 
-    const data ={
+    const {id} = useParams();
+
+
+    useEffect(() => {
+        axios.get(`http://localhost:3001/contatos/${id}`)
+      .then((r)=> {
+       setName(r.data.name)
+       setPhone(r.data.phone)
+       setEmail(r.data.email)
+       setAddress(r.data.address)
+      });
+      },[id]);
+
+      const datos ={
         name: name,
         phone: phone,
         email: email,
         address: address,
-        }
+        };
 
-        function Submit (e) {
-         e.preventDefault();
+      function Atualizar (e) {
+        e.preventDefault();
+        axios.put(`http://localhost:3001/contatos/${id}`, datos)
+        .then(navegador('/'));
+      }
 
-          axios.post('http://localhost:3001/contatos', data)
-          .then(
-            navegador('/')
-          )
-        }
-
-
-        return  <div className='Form-Container'>
-            <h3>Cadastrar</h3>
+    return(
+        <div className='Form-Container'>
+            <h3>Atualizar</h3>
             <form className="form">
                 <input 
                 type="text" 
@@ -65,8 +74,10 @@ const navegador = useNavigate()
                    value={address}
                    required
                    />
-                <button onClick={Submit}> Cadastar</button>
+                <button onClick={Atualizar}> Atualizar</button>
             </form>
         </div>
+    )
 }
-export {AddContact};
+
+export {ToUpdateContact};

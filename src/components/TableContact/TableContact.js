@@ -1,21 +1,30 @@
+import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
+import {Link} from 'react-router-dom';
 
-
-
-const TableContact =() => {
+function TableContact () {
  const [ListaContatos, setListaContatos] = useState([]);
 
-
- function ReadContact() {
-    fetch('http://localhost:3001/contatos')
-      .then((response) => response.json())
-      .then(data => setListaContatos(data));
-  }
   
-  useEffect(() => {
-    ReadContact();
-  }, [])
+    const cargarContatos = () => {
+      axios.get('http://localhost:3001/contatos')
+      .then((res)=> {
+       setListaContatos(res.data);
+      })
+    };
+
+    useEffect(() => {
+      cargarContatos()
+    }, []);
+  
+
+  function Delete(id){
+    axios.delete (`http://localhost:3001/contatos/${id}` )
+    .then(
+      cargarContatos()
+    )
+  }
 
   return ( 
     <Table striped bordered hover variant="dark" className='datospersonas'>
@@ -32,12 +41,12 @@ const TableContact =() => {
     <tbody>
       {ListaContatos.map((contatos, id) => 
           <tr key={id}>
-            <td>{contatos.id}</td>
+            <td>{id +1}</td>
            <td>{contatos.name}</td>
           <td>{contatos.phone}</td>
           <td>{contatos.email}</td>
           <td>{contatos.address}</td>
-          <td><button>Atualizar</button><button>Apagar</button></td>
+         <td><Link to={`/FormContact/ToUpdateContact/${contatos.id}`} >Atualizar</Link>  <button onClick={()=>Delete(contatos.id)}>Apagar</button></td>
         </tr>
         )
       }
@@ -46,7 +55,4 @@ const TableContact =() => {
   
   )
 }
-
-
-
 export {TableContact};
