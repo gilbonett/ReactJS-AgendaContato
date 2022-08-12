@@ -7,9 +7,9 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import {AddContact} from './components/FormContact/FormContact';
-import {TableContact} from './components/TableContact/TableContact';
-import {ToUpdateContact} from "./components/FormContact/ToUpdateContact";
+import {AddContact} from './components/CrudContact/Create';
+import {InformationContact} from './components/InformationContact/InformationContact';
+import {ToUpdateContact} from "./components/CrudContact/ToUpdate";
 
 
 function App() {
@@ -34,9 +34,9 @@ function App() {
       </Navbar>
 
       <Routes>
-        <Route path="/" index element={<TableContact/>}/>
-        <Route path="/FormContact" element={<AddContact/>}/>
-        <Route path="/FormContact/ToUpdateContact/:id" element={<ToUpdateContact/>}/>
+        <Route path="/" index element={<InformationContact/>}/>
+        <Route path="/CrudContact" element={<AddContact/>}/>
+        <Route path="/CrudContact/ToUpdate/:id" element={<ToUpdateContact/>}/>
         <Route path="/" element={<ToUpdateContact/>}/>
       </Routes>
     </BrowserRouter>
