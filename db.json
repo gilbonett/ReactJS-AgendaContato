@@ -2,10 +2,24 @@
   "contatos": [
     {
       "name": "Pedro Luis Gil Bonett",
-      "phone": "(92) 98188-8009",
+      "phone": "92 98188-8009",
       "email": "gilbonett@gmail.com",
       "address": "619 Rua 10 de Julho",
-      "id": 5
+      "id": 1
+    },
+    {
+      "name": "Juana Bonett",
+      "phone": "98 98558-8044",
+      "email": "juanabonett@hotmail.com",
+      "address": "Rua Salvador 445, Manaus",
+      "id": 2
+    },
+    {
+      "name": "Lucas Leandro",
+      "phone": "55 95148-5555",
+      "email": "lucasleandro@outlook.com",
+      "address": "Rua 24 de Maio, Salvador",
+      "id": 3
     }
   ]
 }
