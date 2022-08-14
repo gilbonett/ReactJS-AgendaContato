@@ -1,0 +1,37 @@
+
+
+.containerSearch{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.containerSearch .me-2{
+    border: 1px solid black;
+}
+
+.form-control{
+    display: flex;
+    text-align: center;
+    border:1px solid black;
+}
+
+.container-table{
+    width: 90%;
+    margin-top: 3%;
+    margin-left: 5%;
+    background-color: #f2f2f2;
+}
+
+.thead{
+    border: 1px solid black;
+}
+
+.tbody{
+    border:1px solid black;
+}
+
+.deletarbutton{
+    text-decoration: none;
+    border: 0;
+}

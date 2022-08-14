@@ -1,8 +1,10 @@
 import React, { useState} from 'react';
 import Swal from 'sweetalert2';
-import './Create.css'
+import './FormContact.css'
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+
 
 const AddContact =() => {
     
@@ -39,8 +41,8 @@ const handleSubmit = async (e) => {
         )
     }
 }
-        return  <div className='Form-Container'>
-            <h3>Cadastrar</h3>
+        return  <div className='form-container'>
+            <h2>Cadastrar</h2>
             <form className="form" onSubmit={handleSubmit}>
                 <input 
                 type="text" 
@@ -48,14 +50,17 @@ const handleSubmit = async (e) => {
                 placeholder='Nome' 
                 onChange={handleChange}
                 value={data.name}
+                className="form-control"
                 required
                  />
                 <input 
-                type="text" 
+                type="number" 
                 name='phone' 
                 placeholder='Telefone' 
+                mask="(xx) xxxx-xxxx"
                 onChange={handleChange} 
                 value={data.phone}
+                className="form-control"
                 required
                 />
                 <input 
@@ -64,6 +69,7 @@ const handleSubmit = async (e) => {
                 placeholder='Email'
                 onChange={handleChange}
                 value={data.email}
+                className="form-control"
                 required
                  />
                 <input
@@ -72,9 +78,10 @@ const handleSubmit = async (e) => {
                   placeholder='Endereço'
                   onChange={handleChange}
                    value={data.address}
+                   className="form-control"
                    required
                    />
-                <button> Cadastar</button>
+                <Button type='submit' className='btn btn-sucess'> Cadastrar</Button>
             </form>
         </div>
 }

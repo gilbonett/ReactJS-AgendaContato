@@ -1,9 +1,9 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import Table from 'react-bootstrap/Table';
+import {Table , Form} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import Swal from 'sweetalert2';
-
+import './InformationContact.css';
 
 function InformationContact () {
  const [contatos, setContatos] = useState([]);
@@ -56,7 +56,10 @@ function InformationContact () {
           try {
             const response = await axios.delete (`http://localhost:3001/contatos/${id}`)
               if  (response.status === 200) {
-             Swal.fire ("Eliminado")
+             Swal.fire ({
+              title:"Removido",
+              icon:"success"
+             })
               }
               cargarContatos()
           } catch (error) {
@@ -67,10 +70,21 @@ function InformationContact () {
   };
 
   return ( 
-    <div>
-      <input value={search} onChange={buscador} type="text" placeholder="Search" className='form-control'/>
-    <Table striped bordered hover variant="dark" className='datospersonas'>
-    <thead>
+    <div> 
+       <Form className='containerSearch'> 
+
+       <Form.Control
+            input value={search}
+            type="text"
+            placeholder="Pesquisar Contatos"
+            className="me-2"
+            aria-label="Search"
+            onChange={buscador}
+        />
+        </Form> 
+    <div className='container-table'>
+      <Table striped hover>
+    <thead className='thead'>
       <tr>
       <th>Nr</th>
       <th>Nome</th>
@@ -80,7 +94,7 @@ function InformationContact () {
       <th>Açoes</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody className="tbody">
       {resultadoBusqueda.map((contact, id) => 
           <tr key={id}>
             <td>{id +1}</td>
@@ -88,12 +102,13 @@ function InformationContact () {
           <td>{contact.phone}</td>
           <td>{contact.email}</td>
           <td>{contact.address}</td>
-         <td><Link to={`/FormContact/ToUpdateContact/${contact.id}`} >Atualizar</Link>  <button onClick={()=>Delete(contact.id)}>Apagar</button></td>
+         <td><Link to={`FormContact/ToUpdateContact/${contact.id}`}><img src="assets/lapiz1.png" alt="lapiz" width="25px" /></Link>  <button className='deletarbutton' onClick={()=>Delete(contact.id)}><img src="assets/compartimiento.png" width="25px" alt="" /></button></td>
         </tr>
         )
       }
     </tbody>
   </Table>
+    </div>
   </div>
   )
 }

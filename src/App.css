@@ -1,11 +1,14 @@
-.App{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
- 
+*{
+  font-family: roboto, Arial, Helvetica, sans-serif;
+  font-weight: 400;
 }
 
-.navbar-nav {
-  display: flex;
-  justify-content: space-evenly;
+body{
+  background-image:url("/public/assets/imagen.jpg");
 }
+
+.navbar{
+  background-color: #75CFC9;
+  height: 80px;
+}
+

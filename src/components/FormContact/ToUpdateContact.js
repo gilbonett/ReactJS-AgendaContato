@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import {useParams, useNavigate} from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import './FormContact.css'
+import Swal from 'sweetalert2';
+
 
 
 function ToUpdateContact () {
@@ -35,12 +39,17 @@ function ToUpdateContact () {
       function Atualizar (e) {
         e.preventDefault();
         axios.put(`http://localhost:3001/contatos/${id}`, datos)
+        Swal.fire({
+           icon:"success",
+          title:"Contato Atualizado",
+        }
+        )
         .then(navegador('/'));
       }
 
     return(
-        <div className='Form-Container'>
-            <h3>Atualizar</h3>
+        <div className='form-container'>
+            <h2>Atualizar</h2>
             <form className="form">
                 <input 
                 type="text" 
@@ -49,6 +58,7 @@ function ToUpdateContact () {
                 onChange={(e)=> setName(e.target.value)}
                 value={name}
                 required
+                className="form-control"
                  />
                 <input 
                 type="text" 
@@ -57,6 +67,7 @@ function ToUpdateContact () {
                 onChange={(e)=> setPhone(e.target.value)} 
                 value={phone}
                 required
+                className="form-control"
                 />
                 <input 
                 type="text" 
@@ -65,6 +76,7 @@ function ToUpdateContact () {
                 onChange={(e)=> setEmail(e.target.value)}
                 value={email}
                 required
+                className="form-control"
                  />
                 <input
                  type="text"
@@ -73,8 +85,9 @@ function ToUpdateContact () {
                   onChange={(e)=> setAddress(e.target.value)}
                    value={address}
                    required
+                   className="form-control"
                    />
-                <button onClick={Atualizar}> Atualizar</button>
+                <Button className='btn btn-sucess' onClick={Atualizar}> Atualizar</Button>
             </form>
         </div>
     )

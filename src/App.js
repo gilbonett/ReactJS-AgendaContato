@@ -7,43 +7,38 @@ import {
   Route,
   Link,
 } from 'react-router-dom';
-import {AddContact} from './components/CrudContact/Create';
-import {InformationContact} from './components/InformationContact/InformationContact';
-import {ToUpdateContact} from "./components/CrudContact/ToUpdate";
-
+import {AddContact} from './components/FormContact/FormContact';
+import {InformationContact} from './components/TableContact/InformationContact';
+import {ToUpdateContact} from "./components/FormContact/ToUpdateContact";
 
 function App() {
   return (
     <div className="App" >
       <BrowserRouter>
-      <Navbar  variant="dark" bg="dark">
+      <Navbar  className="navbar">
         <Container>
         <img
               src="/assets/agenda.png"
               width="30"
               height="30"
               className="d-inline-block align-top"
-              alt="React Bootstrap logo"
+              alt="logo agenda"
             />
-            <Navbar.Brand >Contact Directory</Navbar.Brand>
-          <Nav  className="me-auto">
-            <Nav.Link as={Link} to="/">Início</Nav.Link>
-            <Nav.Link as={Link} to="/FormContact">Cadastrar</Nav.Link>
+          <Nav  variant="pills" activeKey="1" className="me-auto">
+            <Nav.Link eventKey="link-1" className="navbar-brand" as={Link} to="/">Agenda de Contatos</Nav.Link>
+            <Nav.Link className="navbar-brand" as={Link} to="/FormContact">Cadastrar</Nav.Link>
           </Nav>
         </Container>   
       </Navbar>
 
       <Routes>
-        <Route path="/" index element={<InformationContact/>}/>
-        <Route path="/CrudContact" element={<AddContact/>}/>
-        <Route path="/CrudContact/ToUpdate/:id" element={<ToUpdateContact/>}/>
+        <Route path="/" index element={<InformationContact />}/>
+        <Route path="/FormContact" element={<AddContact/>}/>
+        <Route path="/FormContact/ToUpdateContact/:id" element={<ToUpdateContact/>}/>
         <Route path="/" element={<ToUpdateContact/>}/>
       </Routes>
     </BrowserRouter>
     </div>
-    
-    
   );
 }
-
 export default App;
