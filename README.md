@@ -1,12 +1,12 @@
-#  Agenda de Contatos CRUD ReactJs
+# 🪙 Agenda de Contatos CRUD ReactJs
 
 <br>
 <p align="center">
   <a href="#-descrição-do-projeto">Descrição do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#-apresentação-em-video">Apresentação do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-apresentação-em-vídeo-do-projeto">Vídeo</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-funcionalidades-do-projeto">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias-e-bibliotecas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#-clonando-o-projeto">Clonando o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-clonando-o-projeto">Clonando o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-desenvolvedores">Contato</a>
 </p>
 <br>
@@ -19,7 +19,7 @@
 
 <p align="justify">A agenda de contatos fue desenvolvida em React, esta biblioteca muito poderosa para construir interfaces de usuario, a interação com API REST foi com Axios que é um cliente http baseado promesas em ou que permite aproveitar o assync e await de Javascript para obter um codigo mais assincrono e legivel</p>
 
-## 🎞️ Apresentação em Video
+## 📹 Apresentação em Vídeo do Projeto
 
 <div align="center">
   <video src="https://user-images.githubusercontent.com/101142283/210625813-5bcf7178-8a00-47db-b2a5-ac1bb438f765.mp4">
