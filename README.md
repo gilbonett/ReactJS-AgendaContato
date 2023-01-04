@@ -32,5 +32,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 <h3>Run the aplication in development mode</h3>
 <p> npm start</p>
 <p> The server will start de door:3000 - acesse http://localhost:3000</p>
+<p> json-server db.json  -p 3001</p>
+
 </div>
 

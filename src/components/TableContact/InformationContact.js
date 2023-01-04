@@ -102,7 +102,9 @@ function InformationContact () {
           <td>{contact.phone}</td>
           <td>{contact.email}</td>
           <td>{contact.address}</td>
-         <td><Link to={`FormContact/ToUpdateContact/${contact.id}`}><img src="assets/lapiz1.png" alt="lapiz" width="25px" /></Link>  <button className='deletarbutton' onClick={()=>Delete(contact.id)}><img src="assets/compartimiento.png" width="25px" alt="" /></button></td>
+         <td><Link to={`FormContact/ToUpdateContact/${contact.id}`}><img src="assets/lapiz1.png" alt="lapiz" width="25px" /></Link> 
+          <button className='deletarbutton' onClick={()=>Delete(contact.id)}><img src="assets/compartimiento.png" width="25px" alt="" /></button>
+          </td>
         </tr>
         )
       }
