@@ -2,17 +2,18 @@
 
 <br>
 <p align="center">
-  <a href="#-apresentação-em-vídeo-do-projeto">Apresentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-sobre">Descrição do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-apresentação-do-projeto">Apresentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tecnologias-e-bibliotecas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-descripção_do_projeto">Descrição do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-contato-dos-contribuintes">Contato</a>
+  <a href="#-desenvolvedores">Contato</a>
 </p>
 <br>
 <p align="center">
 <img src="http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge"/>
 </p>
 <br>
+
 ## 📝 Descripção do Projeto
 
 <p align="justify">A agenda de contatos fue desenvolvida em React, esta biblioteca muito poderosa para construir interfaces de usuario, a interação com API REST foi com Axios que é um cliente http baseado promesas em ou que permite aproveitar o assync e await de Javascript para obter um codigo mais assincrono e legivel</p>
@@ -24,7 +25,8 @@
 </div>
  **Caso o vídeo apresente algum erro, recarregue a página!**<br>
 
-### Funcionalidades
+## Funcionalidades
+
 <div>
 <p>Funcionalidade 1: Interagir con API REST usando AXIOS em React</p> 
 <p>Funcionalidade 2: Realizar solicitudes GET para listar dados de API Fake</p> 
@@ -104,7 +106,7 @@ Feito esses passos, no terminal:
 </table>
 
 <p align="right">
-  <a href="#-agenda_de_contatos_crud_reactjs">Voltar ao Topo</a>
+  <a href="#-🪙agenda-de-contatos-crud-reactjs">Voltar ao Topo</a>
 </p>
 
 
