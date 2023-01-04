@@ -1,10 +1,10 @@
-# 🪙 Agenda de Contatos CRUD ReactJs
+#  Agenda de Contatos CRUD ReactJs
 
 <br>
 <p align="center">
   <a href="#-descrição-do-projeto">Descrição do Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#-apresentação">Apresentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+   <a href="#-apresentação-em-video">Apresentação</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-funcionalidades-do-projeto">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-tecnologias-e-bibliotecas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="#-clonando-o-projeto">Clonando o Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-desenvolvedores">Contato</a>
@@ -19,14 +19,14 @@
 
 <p align="justify">A agenda de contatos fue desenvolvida em React, esta biblioteca muito poderosa para construir interfaces de usuario, a interação com API REST foi com Axios que é um cliente http baseado promesas em ou que permite aproveitar o assync e await de Javascript para obter um codigo mais assincrono e legivel</p>
 
-## Apresentação 🎞️
+## 🎞️ Apresentação em Video
 
 <div align="center">
   <video src="https://user-images.githubusercontent.com/101142283/210625813-5bcf7178-8a00-47db-b2a5-ac1bb438f765.mp4">
 </div>
  **Caso o vídeo apresente algum erro, recarregue a página!**<br>
 
-## Funcionalidades
+## 📝 Funcionalidades do Projeto
 
 <div>
 <p>Funcionalidade 1: Interagir con API REST usando AXIOS em React</p> 
