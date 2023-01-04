@@ -107,7 +107,7 @@ Feito esses passos, no terminal:
 </table>
 
 <p align="right">
-  <a href="#-🪙agenda-de-contatos-crud-reactjs">Voltar ao Topo</a>
+  <a href="#-agenda-de-contatos-crud-reactjs">Voltar ao Topo</a>
 </p>
 
 
